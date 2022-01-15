@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>deltahacks</title>
+        <link rel='stylesheet' href='style.css'>
+        <link rel='shortcut icon' href='media/westernAIinvert.png'>
+    </head>
+
+    <body>
+        <div class='container'>
+            <div class='topnav'>
+                <a href='index.html' class='logo'>
+                    <img class='logo' src='media/westernAIinvert.png'>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href='index.html'>HOME</a></li>
+                        <li><a href='dashboard.html'>DASHBOARD</a></li>
+                        <li><a href='transcribe.html'>TRANSCRIBE</a></li>
+                    </ul>
+                </nav>
+                <a href='https://www.facebook.com/westernuai/' class='logo'>
+                    <img class='wAI' src='media/westernAIinvert.png'>
+                </a>
+            </div>
+
+        <div class='main'>
+            <h1>Upload file</h1>
+            <p>accepted types are .mp3 and .mp4</p>
+            <form action='null'>
+                <!--input file is hard to format with css so this covers it up with a custom button-->
+                <!--problem: there is no confirmation that a file is successfully uploaded-->
+                <label class='custom-file-upload'>
+                    <input type='file' class='file-upload'>
+                    <a class='rounded-button'>UPLOAD</a>
+                </label>
+                <br>
+                <input type='submit' class='rounded-button' value='TRANSCRIBE'>
+            </form>
+        </div>
+    </body>
+</html>
