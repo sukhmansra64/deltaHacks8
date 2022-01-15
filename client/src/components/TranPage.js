@@ -5,6 +5,7 @@ import {Button, Form} from "react-bootstrap";
 import axios from "axios";
 
 const TranPage = () => {
+    const loop = true;
     const [file,setFile] = useState(null);
     const [url, setUrl] = useState('');
     const onChange = (e) =>{
@@ -22,11 +23,16 @@ const TranPage = () => {
             }
         }
         try{
-            const res = await  axios.post("https://api.assemblyai.com/v2/upload",file,config);
-            setUrl(res.data.upload_url);
+            axios.post("https://api.assemblyai.com/v2/upload",file,config).then((res)=>{
+                console.log(res.data.upload_url);
+                setUrl(res.data.upload_url);
+            });
         }catch(err){
             console.error(err.message)
         }
+    }
+    if(url!=''){
+
     }
     return (
         <div>
@@ -48,5 +54,6 @@ const TranPage = () => {
         </div>
     );
 };
+
 
 export default TranPage;
