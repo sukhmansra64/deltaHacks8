@@ -34,6 +34,7 @@ body {
 }
 
 .logo {
+    margin-top: 1rem;
     width: 12rem;
 }
 
@@ -68,7 +69,7 @@ nav ul li {
 nav ul li a {
     font-family: earthorbiter;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 225%;
     color: white;
 }
 
@@ -142,8 +143,9 @@ input[type='file'] {
 }
 
 .media {
-    height: 60%;
+    height: 30vw;
+    width: 30vw;
     position: absolute;
     bottom: 13%;
-    right: 12%;
+    right: 10%;
 }
