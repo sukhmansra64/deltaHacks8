@@ -34,7 +34,7 @@ const TranPage = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ url: url })
         };
-        fetch('http://localhost:3000/api/transcriptions', requestOptions)
+        fetch('/api/transcriptions', requestOptions)
             .then(response => response.json())
             .then(data =>  {
                 console.log(data.id);
@@ -48,7 +48,7 @@ const TranPage = () => {
         setGetStatusButton(true)
                 
               
-        fetch(`http://localhost:3000/api/transcriptions/${ID}`)
+        fetch(`/api/transcriptions/${ID}`)
         .then(async response => {
             const data = await response.json();
 
