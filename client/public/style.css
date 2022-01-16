@@ -10,6 +10,7 @@
 
 body {
     margin: 0;
+    background-color: #78c1fe;
 }
 
 .container {
@@ -148,4 +149,41 @@ input[type='file'] {
     position: absolute;
     bottom: 13%;
     right: 10%;
+}
+
+.two-content-1 {
+    width: 50%;
+    float: left;
+}
+
+.two-content-2 {
+    width: 50%;
+    float: right;
+    /*margin-top: 8rem;*/
+}
+
+.two-content-2 ul {
+    list-style-type: none;
+}
+
+.chapter-title {
+    font-family: earthorbiter;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+.chapter-timestamps {
+    font-family: earthorbiter;
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+.two-content-2 .chapter-description {
+    font-family: vanadine;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0;
 }
