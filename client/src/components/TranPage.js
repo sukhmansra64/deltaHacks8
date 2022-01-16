@@ -8,6 +8,7 @@ import {setAlert} from "../actions/alert";
 
 const TranPage = () => {
     const loop = true;
+    const [isUrl, setIsUrl] = useState(false);
     const [file,setFile] = useState(null);
     const [url, setUrl] = useState('');
     const [ID, setID] = useState('');
@@ -19,6 +20,7 @@ const TranPage = () => {
         setFile(e.target.files[0]);
     }
     const postRequest = () => {
+        setIsUrl(false);
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -70,6 +72,7 @@ const TranPage = () => {
             axios.post("https://api.assemblyai.com/v2/upload",file,config).then((res)=>{
                 console.log(res.data.upload_url);
                 setUrl(res.data.upload_url);
+                setIsUrl(true);
             });
         }catch(err){
             console.error(err.message)
@@ -85,29 +88,47 @@ const TranPage = () => {
         postRequest();
     }
     return (
-        <div>
-            <div className="Login">
-                <Form>
-                    <Form.Group size="lg" controlId="file" onChange={(e)=>onChange(e)}>
-                        <Form.Label>Select a .mp3 or .mp4 file to transcribe</Form.Label>
-                        <Form.Control
-                            autoFocus
-                            type="file"
-                        />
-                    </Form.Group>
+        <div className='main'>
+            {isUrl&&postRequest()}
+            <div className='two-content-1'>
+                <h1>Upload file</h1>
+                <p>accepted types are .mp3 and .mp4</p>
+                <form onChange={(e)=>onChange(e)}>
+                    <label className='custom-file-upload'>
+                        <input type='file' className='file-upload'/>
+                            <a className='rounded-button'>UPLOAD</a>
+                    </label>
                     <br/>
-                    <Button block size="lg" className='btn-dark' onClick={(e)=>onClick(e)}>
-                        Transcribe
-                    </Button>
-                    <br/>
-                    {url!='' &&
-                    <Button onClick={(e)=>onClick3(e)}>get ID</Button>
-                    }
-                    <br/>
-                    {ID!=''&&
-                        <Button onClick={(e)=>onClick2(e)}>get Transcription</Button>
-                    }
-                </Form>
+                    <btn  className='rounded-button' onClick={(e)=>{onClick(e)}}>TRANSCRIBE</btn>
+                </form>
+            </div>
+            <div className="two-content-2">
+                <ul>
+                    <li>
+                        <h3 className='chapter-title'>SAMPLE TITLE</h3>
+                        <a className='chapter-timestamps'>start time</a>
+                        <br/>
+                            <p className='chapter-description'>description</p>
+                    </li>
+                    <li>
+                        <h3 className='chapter-title'>SAMPLE TITLE</h3>
+                        <a className='chapter-timestamps'>start time</a>
+                        <br/>
+                            <p className='chapter-description'>description</p>
+                    </li>
+                    <li>
+                        <h3 className='chapter-title'>SAMPLE TITLE</h3>
+                        <a className='chapter-timestamps'>start time</a>
+                        <br/>
+                            <p className='chapter-description'>description</p>
+                    </li>
+                    <li>
+                        <h3 className='chapter-title'>SAMPLE TITLE</h3>
+                        <a className='chapter-timestamps'>start time</a>
+                        <br/>
+                            <p className='chapter-description'>description</p>
+                    </li>
+                </ul>
             </div>
         </div>
     );

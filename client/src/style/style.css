@@ -1,0 +1,189 @@
+@font-face {
+    font-family: earthorbiter;
+    src: url(fonts/earthorbiter.ttf);
+}
+
+@font-face {
+    font-family: vanadine;
+    src: url(fonts/Vanadine\ Bold.ttf);
+}
+
+body {
+    margin: 0;
+    background-color: #78c1fe;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-image: url(media/bg1.png);
+    background-position: cover;
+    margin: 0;
+    padding-left: 7%;
+    padding-right: 1%;
+    padding-top: 1%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.topnav {
+    width: 100%;
+    height: 15vh;
+    /*margins*/
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 1rem;
+    width: 12rem;
+}
+
+.logo:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.wAI {
+    width: 4rem;
+}
+
+.wAI:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+nav {
+    flex: 1;
+    margin-left: 2%;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+nav ul li a {
+    font-family: earthorbiter;
+    text-decoration: none;
+    font-size: 225%;
+    color: white;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+}
+
+.main h1 {
+    font-family: earthorbiter;
+    font-size: 6rem;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main h2 {
+    font-family: earthorbiter;
+    font-size: 3rem;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main p {
+    font-family: vanadine;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main {
+    margin-top: 7rem;
+    margin-left: 0rem;
+}
+
+.rounded-button {
+    margin-top: 2rem;
+    font-family: earthorbiter;
+    font-size: 2rem;
+
+    display: inline-block;
+    background: linear-gradient(30deg, #8d87eb, #78c1fe);
+    border: none;
+    border-radius: 7px;
+
+    outline-style: solid;
+    outline-color: white;
+    outline-width: 1px;
+
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: white;
+
+    box-shadow: 0 0 3rem -0.5rem white;
+}
+
+.rounded-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/*
+input[type='file'] {
+    display:none;
+}*/
+
+.file-upload {
+    display: none;
+}
+
+.media {
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    bottom: 13%;
+    right: 10%;
+}
+
+.two-content-1 {
+    width: 50%;
+    float: left;
+}
+
+.two-content-2 {
+    width: 50%;
+    float: right;
+    /*margin-top: 8rem;*/
+}
+
+.two-content-2 ul {
+    list-style-type: none;
+}
+
+.chapter-title {
+    font-family: earthorbiter;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+.chapter-timestamps {
+    font-family: earthorbiter;
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+.two-content-2 .chapter-description {
+    font-family: vanadine;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0;
+}

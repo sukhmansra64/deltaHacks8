@@ -4,18 +4,15 @@ import {setAlert} from "../actions/alert";
 import PropTypes from "prop-types";
 import {Button} from "react-bootstrap";
 
-const Landing = ({setAlert}) => {
-    const onClick = (e) =>{
-        e.preventDefault();
-        setAlert('Hello world','danger');
-    }
+const Landing = () => {
+
     return (
-        <>
-            <div>
-                This is the dashboard
-            </div>
-            <Button onClick={(e)=>onClick(e)}>hello world button</Button>
-        </>
+        <div className='main'>
+            <h1>PROJECT NAME</h1>
+            <p>description<br/><br/><br/><br/><br/><br/><br/>description</p>
+            <h2>CREATED BY</h2>
+            <p>Sukhman / Taha / Carter / Adrian</p>
+        </div>
     );
 };
 

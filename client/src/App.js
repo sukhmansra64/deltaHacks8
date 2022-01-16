@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
+import './style/style.css';
 import{BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Landing from './components/Landing';
 import NavBar from "./components/NavBar";

@@ -1,22 +1,24 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import picture from '../style/media/westernAIinvert.png';
 import {Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
 
 const NavBar = () => {
     return (
-        <div>
-            <Navbar bg="light" expand="lg">
-                <Container>
-                    <Navbar.Brand as={Link} to='/'>Insert Name</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link as={Link} to="/">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/tran">Transcription</Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+        <div className='topnav'>
+            <Link to='/' className='logo'>
+                <img className='logo' src={picture}/>
+            </Link>
+            <nav>
+                <ul>
+                    <li><Link to='/'>HOME</Link></li>
+                    <li><Link to='/'>DASHBOARD</Link></li>
+                    <li><Link to='/tran'>TRANSCRIBE</Link></li>
+                </ul>
+            </nav>
+            <a href='https://www.facebook.com/westernuai/'target='_blank' className='logo'>
+                <img className='wAI' src={picture}/>
+            </a>
         </div>
     );
 };
